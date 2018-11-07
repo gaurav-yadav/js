@@ -1,16 +1,14 @@
-"use strict";
-
-var sort = require("./mergeSort");
-var search = require("./binarySearch");
-var assert = require("assert");
+const sort = require("./mergeSort");
+const search = require("./binarySearch");
+const assert = require("assert");
 console.log("-x-");
-var fs = require("fs");
+const fs = require("fs");
 //const { promisify } = require("util");
-var util = require("util");
+const util = require("util");
 
 //cosnt readFile= promisify(fs.readfile);
 //
-var list = [2, 5, 1, 3, 7, 2, 3, 8, 6, 3, 233];
+let list = [2, 5, 1, 3, 7, 2, 3, 8, 6, 3, 233];
 //console.log(sort.mergeSort(list)); // [ 1, 2, 2, 3, 3, 3, 5, 6, 7, 8 ]
 list = sort.mergeSort(list);
 console.log(search.binarySearch(list, 7));
