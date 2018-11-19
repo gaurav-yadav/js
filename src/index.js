@@ -1,17 +1,99 @@
 const sort = require("./mergeSort");
 const search = require("./binarySearch");
 const assert = require("assert");
+const subArray = require("./subArray");
+const lcs = require("./lcs");
 console.log("-x-");
 const fs = require("fs");
 //const { promisify } = require("util");
 const util = require("util");
+const bst = require("./BST");
+const p = require("./parenthesis");
+const can = require("./cancellation");
+const ana = require("./anagram");
+const freq = require("./frequentkele");
+const m = require("./multiply");
+m.init();
 
+//freq.frequentk("2323423423232228942783648752376298");
+
+//ana.anagramChecker("testt", "testts");
+
+// const parenthesisInput = "()(()))))";
+// p.parrenthesisChecker(parenthesisInput);
+// const cancellationData = {
+//   cancellable: "true",
+//   cancellationCharges: {
+//     entry: [
+//       {
+//         key: "4",
+//         value: "10.10"
+//       },
+//       {
+//         key: "8",
+//         value: "10.20"
+//       },
+//       {
+//         key: "18",
+//         value: "10.40"
+//       }
+//     ]
+//   },
+//   fares: {
+//     entry: [
+//       {
+//         key: "4",
+//         value: "105.00"
+//       },
+//       {
+//         key: "8",
+//         value: "105.00"
+//       },
+//       {
+//         key: "18",
+//         value: "105.00"
+//       }
+//     ]
+//   },
+//   freeCancellationTime: "0",
+//   partiallyCancellable: "false",
+//   serviceCharge: "0",
+//   tatkalTime: "0"
+// };
+
+// const singleSeatCancellation = {
+//   cancellable: "true",
+//   cancellationCharges: { entry: { key: "9", value: "10.00" } },
+//   fares: { entry: { key: "9", value: "105.00" } },
+//   freeCancellationTime: "0",
+//   partiallyCancellable: "true",
+//   serviceCharge: "0",
+//   tatkalTime: "0"
+// };
+// can.transformCancellationDetails(cancellationData, [4, 8], 3);
 //cosnt readFile= promisify(fs.readfile);
 //
-let list = [2, 5, 1, 3, 7, 2, 3, 8, 6, 3, 233];
+//let list = [2, 5, 1, 3, 4, 5];
+//subArray.subArray(list,2);
 //console.log(sort.mergeSort(list)); // [ 1, 2, 2, 3, 3, 3, 5, 6, 7, 8 ]
-list = sort.mergeSort(list);
-console.log(search.binarySearch(list, 7));
+//list = sort.mergeSort(list);
+//console.log(search.binarySearch(list, 7));
 //console.log(x);
 //console.log(getPowerSet("gaurav"));
 //console.log(multiply(1345643, 14567845));
+// const tree = new bst.BinarySearchTree();
+// tree.insert(9);
+// tree.insert(4);
+// tree.insert(6);
+// tree.insert(20);
+// tree.insert(170);
+// tree.insert(15);
+// tree.insert(1);
+// tree.remove(170);
+// console.log(JSON.stringify(bst.traverse(tree.root)));
+
+// const str1 = "AGGTAB";
+// const str2 = "GXTXAYB";
+// const m = str1.length;
+// const n = str2.length;
+// console.log(lcs.ll(str1, str2, m, n));

@@ -19,3 +19,4 @@ export function binarySearch(list, value) {
   // if the current middle item is what we're looking for return it's index, else return -1
   return list[middle] !== value ? -1 : middle;
 }
+
