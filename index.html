@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <script>
+
+        function dragstart_handler(ev) {
+            console.log("dragStart");
+            // Add the target element's id to the data transfer object
+            ev.dataTransfer.setData("text/plain", ev.target.id);
+        }
+        // run this function when the document is loaded
+        window.onload = function () {
+
+            // create a couple of elements in an otherwise empty HTML page
+            var heading = document.createElement("h1");
+            var heading2 = document.createElement("h3");
+            var heading_text = document.createTextNode("Big Head!");
+            heading.appendChild(heading_text);
+           // document.body.appendChild(heading);
+
+            var b = document.querySelector("button");
+            hellow = (value) => {
+                console.log(value, "the passed")
+                alert(`i'm clicked with value", + ${value}`)
+            }
+            deleteItem = (e) => {
+                var element = document.getElementById(e);
+                element.parentNode.removeChild(element);
+
+            }
+            let deleteItem2 = (e) => {
+                console.log(e, "del 2")
+            }
+
+            addToList = () => {
+                let tb = document.getElementById("inputCenter");
+                let list = document.getElementById("listone")
+                if (tb.value) {
+                    var li = document.createElement("li");
+                    li.appendChild(document.createTextNode(tb.value));
+                    li.setAttribute("id", tb.value)
+                    li.addEventListener("click", deleteItem2)
+                    list.append(li);
+                }
+                else (
+                    alert("add some text for task ")
+                )
+
+            }
+            b.setAttribute("name", "helloButton");
+            b.setAttribute("enabled", "");
+
+
+
+
+            b.addEventListener("click", addToList, false)
+            //  setInterval(()=>{
+            //      var h=document.createElement("h3");
+            //      h.appendChild(document.createTextNode(Date()))
+            //      document.body.appendChild(h)
+            //  },2000)
+        }
+    </script>
+</head>
+
+<body>
+    <button>add to list</button>
+    <br />
+    <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">This element is draggable.</p>
+    <input type="text" id="inputCenter" placeholder="put something here">
+    <ul id="listone"></ul>
+</body>
+
+</html>
